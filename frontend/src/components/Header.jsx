@@ -1,9 +1,9 @@
 import { FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 // import { logout } from "../features/auth/authService";
-import { reset,logout } from "../features/auth/authSlice";
+import { reset, logout } from "../features/auth/authSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo">
+      <div className="header-flex">
         <Link to="/">Support desk</Link>
 
         <ul>

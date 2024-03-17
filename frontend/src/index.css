@@ -377,6 +377,13 @@ footer {
   animation: spin 1.2s linear infinite;
 }
 
+.header-flex{
+  display: flex;
+  justify-content:space-between !important;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -402,5 +409,10 @@ footer {
 
   .heading p {
     font-size: 1.5rem;
+  }
+
+  .header-flex{
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 }

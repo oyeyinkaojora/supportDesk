@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
-import { UseSelector, useDispatch, useSelector } from "react-redux";
+import { FaSignInAlt } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import { login, reset } from "../features/auth/authSlice";
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
