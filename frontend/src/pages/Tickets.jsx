@@ -22,7 +22,6 @@ const Tickets = () => {
 
   useEffect(() => {
     dispactch(getUserTickets());
-    console.log(tickets);
   }, [dispactch]);
 
   if (isLoading) {
@@ -40,9 +39,12 @@ const Tickets = () => {
           <div>Status</div>
           <div></div>
         </div>
-        {tickets.map((ticket) => (
-          <TicketItem key={ticket._id} ticket={ticket} />
-        ))}
+        {tickets
+          .slice()
+          .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+          .map((ticket) => (
+            <TicketItem key={ticket._id} ticket={ticket} />
+          ))}
       </div>
     </>
   );

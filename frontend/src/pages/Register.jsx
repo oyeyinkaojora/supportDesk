@@ -54,8 +54,6 @@ const Register = () => {
 
       dispatch(register(userData));
     }
-    // You can add form submission logic here, such as sending data to the server
-    console.log(formData);
   };
 
   if (isLoading) {
